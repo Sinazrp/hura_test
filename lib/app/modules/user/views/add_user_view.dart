@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:hura_test/core/resources/appbar/app_appbar.dart';
 
 import '../controllers/user_controller.dart';
 
@@ -9,10 +10,7 @@ class AddUserView extends GetView<UserController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('AddUserView'),
-        centerTitle: true,
-      ),
+      appBar: AppAppBar(title: 'Create User'),
       body: const Center(
         child: Text(
           'AddUserView is working',

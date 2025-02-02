@@ -38,8 +38,6 @@ dependencies:
   loading_indicator: ^3.1.1
   animated_text_kit: ^4.2.3
   dio: ^5.8.0+1
-  shared_preferences: ^2.5.1
-  connectivity_plus: ^6.1.2
   toastification: ^2.3.0
   flutter_svg: ^2.0.17
   gap: ^3.0.1

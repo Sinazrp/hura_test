@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:hura_test/app/modules/intro/screens/splash_screen.dart';
+import 'package:hura_test/app/modules/user/views/add_user_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -26,6 +27,11 @@ class AppPages {
     GetPage(
       name: _Paths.USER,
       page: () => const UserView(),
+      binding: UserBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREATE_USER,
+      page: () => const AddUserView(),
       binding: UserBinding(),
     ),
   ];
