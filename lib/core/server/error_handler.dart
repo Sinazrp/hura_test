@@ -10,35 +10,39 @@ class ErrorHandler {
   );
 
   static ApiResponse httpErrorHandle({
-    required int statusCode,
+    int? statusCode,
+    String? errMessage,
   }) {
     String errorMessage;
+    if (errMessage == null) {
+      switch (statusCode) {
+        case 400:
+          errorMessage = 'Bad Request';
+          break;
 
-    switch (statusCode) {
-      case 400:
-        errorMessage = 'Bad Request';
-        break;
+        case 500:
+          errorMessage = 'Internal Server Error';
+          break;
 
-      case 500:
-        errorMessage = 'Internal Server Error';
-        break;
+        case 404:
+          errorMessage = 'Not Found';
+          break;
 
-      case 404:
-        errorMessage = 'Not Found';
-        break;
+        case 408:
+          errorMessage = 'Request Timeout';
+          break;
 
-      case 408:
-        errorMessage = 'Request Timeout';
-        break;
-
-      default:
-        errorMessage = 'An unexpected error occurred';
-        break;
+        default:
+          errorMessage = 'An unexpected error occurred';
+          break;
+      }
+    } else {
+      errorMessage = errMessage;
     }
 
     return ApiResponse(
       message: errorMessage,
-      statusCode: statusCode,
+      statusCode: statusCode ?? 0,
     );
   }
 }

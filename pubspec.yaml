@@ -41,6 +41,7 @@ dependencies:
   toastification: ^2.3.0
   flutter_svg: ^2.0.17
   gap: ^3.0.1
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:
