@@ -47,7 +47,7 @@ class AddUserView extends GetView<UserController> {
                       width: context.width * 0.25,
                       title: 'Clear',
                       isLoading: false,
-                      onTap: controller.isLoading.value
+                      onTap: controller.isAddUserLoading.value
                           ? () {}
                           : () {
                               controller.clear();
@@ -58,15 +58,13 @@ class AddUserView extends GetView<UserController> {
                       height: 45,
                       width: context.width * 0.5,
                       title: 'Add User',
-                      isLoading: controller.isLoading.value,
+                      isLoading: controller.isAddUserLoading.value,
                       onTap: () {
                         controller.createUser(context);
                       },
                     )),
               ],
             )
-            // AppFormField(
-            //     controller: lastName, noBorder: false, hintText: 'Last Name'),
           ],
         ));
   }

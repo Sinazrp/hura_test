@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hura_test/app/data/model/user.dart';
 import 'package:hura_test/core/utils/toast/toast.dart';
 
 import '../providers/user_provider.dart';
@@ -11,7 +12,8 @@ class UserController extends GetxController {
   TextEditingController lastNameC = TextEditingController();
   final firstName = RxString('');
   final lastName = RxString('');
-  var isLoading = RxBool(false);
+  var isAddUserLoading = RxBool(false);
+
   Future<void> clear() async {
     firstNameC.clear();
     lastNameC.clear();
@@ -22,7 +24,7 @@ class UserController extends GetxController {
   final UserProvider _userProvider = UserProvider();
 
   Future<void> createUser(BuildContext context) async {
-    isLoading.value = true;
+    isAddUserLoading.value = true;
     final userData = {
       'first_name': firstName.value,
       'last_name': lastName.value,
@@ -33,12 +35,12 @@ class UserController extends GetxController {
       (l) {
         // Handle error
         displayErrorToast(context, l.message);
-        isLoading.value = false;
+        isAddUserLoading.value = false;
       },
       (r) {
         // Handle success
         displaySuccessToast(context, 'User created successfully');
-        isLoading.value = false;
+        isAddUserLoading.value = false;
         clear();
       },
     );

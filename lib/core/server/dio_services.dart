@@ -8,8 +8,8 @@ class DioServices {
       : _dio = Dio(
           BaseOptions(
             baseUrl: AppConstants.baseUrl,
-            // connectTimeout: const Duration(seconds: 60),
-            // receiveTimeout: const Duration(seconds: 60),
+            connectTimeout: const Duration(seconds: 30),
+            receiveTimeout: const Duration(seconds: 30),
           ),
         );
   static final DioServices _instance = DioServices._internal();
