@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
+import 'package:toastification/toastification.dart';
 
 import 'app/routes/app_pages.dart';
 import 'config/app_theme.dart';
@@ -24,18 +25,20 @@ class MyApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
-      child: GetMaterialApp(
-        title: 'Hura-test',
-        theme: AppTheme.lightTheme,
-        builder: (BuildContext context, Widget? widget) {
-          ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
-            return const AppLoading();
-          };
-          return widget!;
-        },
-        debugShowCheckedModeBanner: false,
-        initialRoute: AppPages.INITIAL,
-        getPages: AppPages.routes,
+      child: ToastificationWrapper(
+        child: GetMaterialApp(
+          title: 'Hura-test',
+          theme: AppTheme.lightTheme,
+          builder: (BuildContext context, Widget? widget) {
+            ErrorWidget.builder = (FlutterErrorDetails errorDetails) {
+              return const AppLoading();
+            };
+            return widget!;
+          },
+          debugShowCheckedModeBanner: false,
+          initialRoute: AppPages.INITIAL,
+          getPages: AppPages.routes,
+        ),
       ),
     );
   }

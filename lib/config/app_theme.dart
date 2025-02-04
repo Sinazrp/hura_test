@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../core/resources/app_value.dart';
 import '../core/resources/colors.dart';
 
 class AppTheme {
   static const Color primaryColor = AppColors.primary;
-  static const BorderRadius appPrimaryRadius = AppValue.radius8;
+  static const BorderRadius appPrimaryRadius =
+      BorderRadius.all(Radius.circular(8));
   static const Color errorColor = AppColors.error;
 
   // Light Color Scheme
@@ -61,7 +61,8 @@ class AppTheme {
       style: OutlinedButton.styleFrom(
         foregroundColor: AppColors.primaryVariant,
         side: const BorderSide(color: AppColors.primaryVariant, width: 1),
-        shape: const RoundedRectangleBorder(borderRadius: AppValue.radius8),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(8))),
       ),
     ),
   );

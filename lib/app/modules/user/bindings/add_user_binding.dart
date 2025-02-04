@@ -1,13 +1,13 @@
 import 'package:get/get.dart';
 import 'package:hura_test/core/server/dio_services.dart';
 
-import '../controllers/user_controller.dart';
+import '../controllers/add_user_controller.dart';
 
-class UserBinding extends Bindings {
+class AddUserBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<UserController>(
-      () => UserController(),
+    Get.lazyPut<AddUserController>(
+      () => AddUserController(),
     );
     Get.lazyPut<DioServices>(
       () => DioServices(),

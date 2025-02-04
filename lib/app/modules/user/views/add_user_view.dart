@@ -6,9 +6,9 @@ import 'package:hura_test/core/extensions/color.dart';
 import 'package:hura_test/core/resources/appbar/app_appbar.dart';
 import 'package:hura_test/core/resources/button/primary_button.dart';
 
-import '../controllers/user_controller.dart';
+import '../controllers/add_user_controller.dart';
 
-class AddUserView extends GetView<UserController> {
+class AddUserView extends GetView<AddUserController> {
   const AddUserView({super.key});
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class AddUserView extends GetView<UserController> {
                       title: 'Add User',
                       isLoading: controller.isAddUserLoading.value,
                       onTap: () {
-                        controller.createUser(context);
+                        controller.createUser();
                       },
                     )),
               ],
