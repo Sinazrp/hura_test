@@ -23,7 +23,7 @@ class AppTheme {
       error: errorColor,
       onError: AppColors.white,
       onSecondaryContainer: AppColors.warningBg,
-      onSurfaceVariant: AppColors.onCard);
+      onSurfaceVariant: AppColors.complementary);
 
   // Light Theme
   static final ThemeData lightTheme = ThemeData(
