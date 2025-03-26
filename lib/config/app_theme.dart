@@ -18,6 +18,7 @@ class AppTheme {
       onSecondary: AppColors.lightSecondaryTextColor,
       secondaryContainer: Color.fromRGBO(219, 234, 255, 1.0),
       surface: AppColors.backgroundColor,
+      sadsadas
       onSurface: AppColors.gray14,
       tertiaryContainer: AppColors.lightGraySurfaceColor,
       error: errorColor,
@@ -27,7 +28,7 @@ class AppTheme {
 
   // Light Theme
   static final ThemeData lightTheme = ThemeData(
-    colorScheme: _lightColorScheme,
+    colorScheme: _lightColorScheme,asdas
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.lightBackgroundColor,
     cardColor: AppColors.lightCardColor,
