@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:hura_test/core/resources/colors.dart' show AppColors;
 import '../core/resources/colors.dart';
+import '../core/resources/colors.dart';
+
 
 class AppTheme {
   static const Color primaryColor = AppColors.primary;
