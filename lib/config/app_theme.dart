@@ -22,7 +22,7 @@ class AppTheme {
       tertiaryContainer: AppColors.lightGraySurfaceColor,
       error: errorColor,
       onError: AppColors.white,
-      onSecondaryContainer: AppColors.warningBg,
+      onSecondaryContainer: AppColors.error,
       onSurfaceVariant: AppColors.complementary);
 
   // Light Theme
